@@ -10,7 +10,7 @@
   }
   body {
     font-size: 16px;
-    font-family: Menlo, Monaco, fixed;
+    font-family: Monaco, Courier, fixed;
     background: #000;
     color: #fff;
     display: flex;
@@ -46,10 +46,11 @@
   }
   #logo {
     width: 250px;
-    animation: slide-down 8s cubic-bezier(0.23, 1, 0.32, 1);
+    animation: logo 5s cubic-bezier(0.23, 1, 0.32, 1);
+    transform: scale(1.1);
   }
   #text {
-    animation: slide-up 5s cubic-bezier(0.23, 1, 0.32, 1);
+
   }
   #signup {
     margin-top: 50px;
@@ -79,16 +80,17 @@
   }
 
 
-  @keyframes slide-down {
+  @keyframes logo {
     0% {
       opacity: 0;
-      transform: translateY(-50px);
+      transform: translateY(-100px) scale(0.8) rotate(15deg);
     }
-    50% {
-      transform: translateY(0px);
+    65% {
+      transform: translateY(0px) scale(1);
     }
     100% {
       opacity: 1;
+      transform: rotate(0) scale(1.1);
     }
   }
   @keyframes slide-up {
